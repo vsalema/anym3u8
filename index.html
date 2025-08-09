@@ -715,13 +715,14 @@
                             </div>
                         </form>
                         
-                        <script src="https://vjs.zencdn.net/8.14.0/video.min.js"></script><div class="embed-responsive"><video id="player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline poster="https://anym3u8player.com/live.gif">
+                        <script src="https://vjs.zencdn.net/8.14.0/video.min.js"></script><div class="embed-responsive">
+                            <video id="player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline poster="">
                                         <source src="https://dl34.darkibox.com/hls2/31/01422/,zm2tfvb19tk8_x,lang/eng/zm2tfvb19tk8_eng,lang/fre/zm2tfvb19tk8_fre,.urlset/master.m3u8" type="application/x-mpegURL">
                                       </video></div>
                             <script>
                                 document.addEventListener("DOMContentLoaded", function() {
                                     var player = videojs("player", {
-                                        autoplay: false,
+                                        autoplay: true,
                                         muted: false,
                                         fluid: true,
                                         controls: true,
@@ -930,3 +931,4 @@
 </body>
 
 </html>
+
