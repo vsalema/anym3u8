@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>dl34.darkibox.com | Stream Player</title>
+    <link rel="shortcut icon" href="https://anym3u8player.com/favicon_play.ico" type="image/x-icon" />
+    <meta name="description" content="dl34.darkibox.com and livestream player. Play MP4, HTTP live streaming, and more. Test your video streams with our modern, user-friendly player." />
+    <meta name="keywords" content="dl34.darkibox.com, MP4 Player, Livestream player, HLS player, html5 video player, IPTV player, mpd player, html5 player, MP4 player, live TV, TV online, internet TV, online player, IPTV Checker" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="canonical" href="https://anym3u8player.com/mp4-player/?url=https%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://anym3u8player.com/mp4-player/?url=https%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8" />
+    <meta property="og:image" content="https://anym3u8player.com/live.gif" />
+    <meta property="og:image:secure_url" content="https://anym3u8player.com/live.gif" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="dl34.darkibox.com | Stream Player" />
+    <meta property="og:description" content="dl34.darkibox.com and livestream player. Play MP4, HTTP live streaming, and more. Test your video streams with our modern, user-friendly player." />
+    <meta property="og:site_name" content="AnyM3U8Player" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@anym3u8player" />
+    <meta name="twitter:title" content="dl34.darkibox.com | Stream Player" />
+    <meta name="twitter:description" content="dl34.darkibox.com and livestream player. Play MP4, HTTP live streaming, and more. Test your video streams with our modern, user-friendly player." />
+    <meta name="twitter:image" content="https://anym3u8player.com/live.gif" />
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Preload Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Load stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://vjs.zencdn.net/8.14.0/video-js.css" rel="stylesheet" />
+    
+    <style>
+    :root {
+        --primary: #4361ee;
+        --primary-dark: #3a56d4;
+        --secondary: #3f37c9;
+        --accent: #f72585;
+        --dark: #222639;
+        --light: #f8f9fa;
+        --gray: #6c757d;
+        --success: #4bb543;
+        --info: #3a86ff;
+        --warning: #fca311;
+        --danger: #e63946;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        --transition: all 0.3s ease;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    
+    .header {
+        background-color: var(--dark);
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .header .logo {
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .header .logo span {
+        color: var(--accent);
+    }
+    
+    .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0 10px;
+        font-weight: 500;
+        transition: var(--transition);
+        font-size: 15px;
+    }
+    
+    .nav-link:hover, 
+    .nav-link:focus {
+        color: white;
+    }
+    
+    .nav-link.active {
+        color: white;
+        position: relative;
+    }
+    
+    .nav-link.active:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--accent);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, var(--dark) 0%, #303552 100%);
+        padding: 60px 0;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(var(--accent), transparent 70%);
+        opacity: 0.3;
+        top: -100px;
+        right: -100px;
+        border-radius: 50%;
+    }
+    
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(var(--primary), transparent 70%);
+        opacity: 0.2;
+        bottom: -80px;
+        left: -80px;
+        border-radius: 50%;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        font-weight: 300;
+        opacity: 0.9;
+    }
+    
+    .main-content {
+        padding: 60px 0;
+    }
+    
+    .player-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .url-input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e1e5eb;
+        border-radius: var(--border-radius);
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: var(--transition);
+    }
+    
+    .url-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        outline: none;
+    }
+    
+    .player-buttons {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .btn-player {
+        flex: 1;
+        padding: 12px 0;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        background-color: var(--primary);
+        border: none;
+    }
+    
+    .btn-player:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .embed-responsive {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        background-color: #000;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    
+    .embed-responsive iframe,
+    .embed-responsive #player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    .video-js {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .features-section {
+        padding: 60px 0;
+        background-color: #f1f4f9;
+    }
+    
+    .feature-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 25px;
+        height: 100%;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: var(--primary);
+        opacity: 0.6;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .feature-icon {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: var(--primary);
+    }
+    
+    .feature-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .feature-text {
+        color: var(--gray);
+        font-size: 15px;
+    }
+    
+    .sharing-section {
+        margin-top: 30px;
+        background-color: #f8f9fa;
+        border-radius: var(--border-radius);
+        padding: 20px;
+        border: 1px solid #e9ecef;
+    }
+    
+    .sharing-section h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: var(--dark);
+    }
+    
+    .share-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .share-btn {
+        padding: 8px 15px;
+        border-radius: var(--border-radius);
+        background-color: var(--primary);
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .share-btn:hover {
+        background-color: var(--primary-dark);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #embed-input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #e1e5eb;
+        border-radius: var(--border-radius);
+        margin-top: 15px;
+        font-family: monospace;
+        font-size: 14px;
+        background-color: #f8f9fa;
+        display: none;
+    }
+    
+    .fake-player {
+        width: 100%;
+        background-color: #000;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    
+    .fake-video {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .fake-video-preview {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .fake-play-button {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 26px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: var(--transition);
+        z-index: 2;
+    }
+    
+    .fake-play-button:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        background-color: var(--primary-dark);
+    }
+    
+    .fake-controls {
+        background-color: rgba(34, 38, 57, 0.9);
+        padding: 10px 15px;
+    }
+    
+    .fake-progress {
+        width: 100%;
+        height: 5px;
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 3px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    
+    .fake-progress-bar {
+        height: 100%;
+        width: 35%;
+        background-color: var(--primary);
+        border-radius: 3px;
+    }
+    
+    .fake-buttons {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    .fake-button {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: var(--transition);
+    }
+    
+    .fake-button:hover {
+        opacity: 1;
+    }
+    
+    .fake-time {
+        font-size: 12px;
+        margin-right: 15px;
+        opacity: 0.8;
+    }
+    
+    .fake-volume {
+        margin-right: 15px;
+        opacity: 0.8;
+    }
+    
+    .fake-spacer {
+        flex-grow: 1;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .section-title::after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 4px;
+        background-color: var(--primary);
+        margin: 15px auto 0;
+        border-radius: 2px;
+    }
+    
+    .footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+    }
+    
+    .footer p {
+        margin-bottom: 0;
+        opacity: 0.8;
+    }
+    
+    .footer a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: var(--transition);
+    }
+    
+    .footer a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .embed-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--accent);
+        color: white;
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-weight: 600;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(247, 37, 133, 0.3);
+        transition: var(--transition);
+        z-index: 100;
+    }
+    
+    .embed-button:hover {
+        background-color: #dc2079;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(247, 37, 133, 0.4);
+    }
+    
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .modal-content {
+        border-radius: var(--border-radius);
+        border: none;
+        box-shadow: var(--box-shadow);
+    }
+    
+    .modal-header {
+        background-color: var(--primary);
+        color: white;
+        border-bottom: none;
+        border-radius: calc(var(--border-radius) - 1px) calc(var(--border-radius) - 1px) 0 0;
+    }
+    
+    .modal-title {
+        font-weight: 600;
+    }
+    
+    .modal-body {
+        padding: 25px;
+    }
+    
+    .modal-body h5 {
+        color: var(--primary);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .modal-body code {
+        display: block;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: var(--border-radius);
+        margin: 15px 0;
+        white-space: pre-wrap;
+        font-family: monospace;
+        font-size: 13px;
+        color: #333;
+        border: 1px solid #e1e5eb;
+    }
+    
+    .modal-footer {
+        border-top: none;
+    }
+    
+    .modal-footer .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+    
+    .modal-footer .btn-primary:hover {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+    }
+    
+    .http {
+        color: var(--danger);
+        font-weight: 500;
+    }
+    
+    .https {
+        color: var(--success);
+        font-weight: 500;
+    }
+    
+    @media (max-width: 767.98px) {
+        .hero {
+            padding: 40px 0;
+        }
+        
+        .hero-title {
+            font-size: 2rem;
+        }
+        
+        .player-card {
+            padding: 20px;
+        }
+        
+        .player-buttons {
+            flex-direction: column;
+        }
+        
+        .btn-player {
+            width: 100%;
+        }
+        
+        .main-content {
+            padding: 40px 0;
+        }
+        
+        .feature-card {
+            margin-bottom: 20px;
+        }
+    }
+    
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(67, 97, 238, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+    }
+    
+    .pulse-animation {
+        animation: pulse 0.75s 2;
+    }
+    </style>
+    
+    </head>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.anym3u8player.com"]);
+  _paq.push(["setDomains", ["*.anym3u8player.com"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.techyhub.co/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.techyhub.co/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="logo" href="/">Any<span>M3U8</span>Player</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/your-tv/">Your TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ultimate-player-generator/">Ultimate Player Generator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/player-generator/">P2P Player</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/m3u8-player-chat/">Player+Chat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mp4-player/">MP4 Player</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq/">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1 class="hero-title">Free Online MP4 Player</h1>
+            <p class="hero-subtitle">Play MP4, M3U8, HLS, and more video formats online without downloads</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="player-card">
+                        <form action="" method="GET">
+                            <input type="text" class="url-input" id="m3u8-url" name="url" placeholder="Enter your URL here (.mp4 .m3u8 .mpd .mkv .webm)" value="https://dl34.darkibox.com/hls2/31/01422/,zm2tfvb19tk8_x,lang/eng/zm2tfvb19tk8_eng,lang/fre/zm2tfvb19tk8_fre,.urlset/master.m3u8">
+                            <div class="player-buttons">
+                                <button type="submit" class="btn-player">
+                                    <i class="fas fa-play me-2"></i> PLAY
+                                </button>
+                                <button type="button" class="btn-player" id="fullscreenPlayButton">
+                                    <i class="fas fa-expand me-2"></i> Play Fullscreen
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <script src="https://vjs.zencdn.net/8.14.0/video.min.js"></script><div class="embed-responsive"><video id="player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" playsinline poster="https://anym3u8player.com/live.gif">
+                                        <source src="https://dl34.darkibox.com/hls2/31/01422/,zm2tfvb19tk8_x,lang/eng/zm2tfvb19tk8_eng,lang/fre/zm2tfvb19tk8_fre,.urlset/master.m3u8" type="application/x-mpegURL">
+                                      </video></div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    var player = videojs("player", {
+                                        autoplay: false,
+                                        muted: false,
+                                        fluid: true,
+                                        controls: true,
+                                        responsive: true,
+                                        techOrder: ["html5"],
+                                        html5: {
+                                            hls: {
+                                                overrideNative: true
+                                            }
+                                        }
+                                    });
+                        
+                                    player.on("play", function() {
+                                        player.poster("");  // Remove the poster image
+                                    });
+                                });
+                            </script>
+                            
+                            <div class="sharing-section">
+                                <h3><i class="fas fa-share-alt me-2"></i>Share this video:</h3>
+                                <div class="share-buttons">
+                                    <a class="share-btn" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fanym3u8player.com%2Fmp4-player%2Fvideo-player.php%3Furl%3Dhttps%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8" target="_blank">
+                                        <i class="fab fa-facebook-f"></i> Facebook
+                                    </a>
+                                    <a class="share-btn" href="https://wa.me/?text=https%3A%2F%2Fanym3u8player.com%2Fmp4-player%2Fvideo-player.php%3Furl%3Dhttps%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </a>
+                                    <a class="share-btn" href="https://twitter.com/share?url=https%3A%2F%2Fanym3u8player.com%2Fmp4-player%2Fvideo-player.php%3Furl%3Dhttps%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8" target="_blank">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </a>
+                                    <a class="share-btn" href="https://telegram.me/share/url?url=https%3A%2F%2Fanym3u8player.com%2Fmp4-player%2Fvideo-player.php%3Furl%3Dhttps%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8" target="_blank">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </a>
+                                    <a class="share-btn" href="mailto:?subject=Video&body=https%3A%2F%2Fanym3u8player.com%2Fmp4-player%2Fvideo-player.php%3Furl%3Dhttps%3A%2F%2Fdl34.darkibox.com%2Fhls2%2F31%2F01422%2F%2Czm2tfvb19tk8_x%2Clang%2Feng%2Fzm2tfvb19tk8_eng%2Clang%2Ffre%2Fzm2tfvb19tk8_fre%2C.urlset%2Fmaster.m3u8">
+                                        <i class="fas fa-envelope"></i> Email
+                                    </a>
+                                    <a class="share-btn" href="#" onclick="showEmbed()">
+                                        <i class="fas fa-code"></i> Embed
+                                    </a>
+                                    <a class="share-btn" href="#" onclick="copyLink()">
+                                        <i class="fas fa-link"></i> Copy Link
+                                    </a>
+                                </div>
+                                <input id="embed-input" type="text" value='<iframe frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen" src="https://anym3u8player.com/mp4-player/video-player.php?url=https://dl34.darkibox.com/hls2/31/01422/,zm2tfvb19tk8_x,lang/eng/zm2tfvb19tk8_eng,lang/fre/zm2tfvb19tk8_fre,.urlset/master.m3u8"></iframe>'>
+                            </div>
+                                                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Features & Benefits</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="feature-title">HTTP Live Streaming</h3>
+                        <p class="feature-text">If your MP4 link starts with <span class="http">http://</span>, use our MP4 player without <span class="https">https://</span>. This solves cross-origin issues between different protocols.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="feature-title">Embed Player Online</h3>
+                        <p class="feature-text">Integrate our player into your website with our embed player. It's easy to use, ensuring your viewers enjoy seamless video playback.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h3 class="feature-title">MP4 Video Test</h3>
+                        <p class="feature-text">Before going live, test your MP4 video with our dedicated tool. Ensure everything is in order, from video quality to sound.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <a href="https://anym3u8player.com/" title="M3U8 Player">AnyM3U8Player.com</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Embed Button -->
+    <button class="embed-button" type="button" data-bs-toggle="modal" data-bs-target="#embedModal">
+        <i class="fas fa-code me-2"></i> How to embed!
+    </button>
+    
+    <!-- Embed Modal -->
+    <div class="modal fade" id="embedModal" tabindex="-1" aria-labelledby="embedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="embedModalLabel">How to Embed This Player</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Supported Platforms: iOS / Android / Mac OS X / tvOS / Windows / Android TV</p>
+                    <p>Follow these methods to build the embeddable player URL:</p>
+                    
+                    <h5>HTTPS method (For secured websites with SSL certificate)</h5>
+                    <p>If your website has an SSL certificate, use the https protocol for the embeddable URL. Your streaming URL must also support https.</p>
+                    <p>Example: <span class="https">https</span>://anym3u8player.com/mp4-player/video-player.php?url=<span class="https">https</span>://example.com/playlist.mp4</p>
+                    
+                    <p>Example of embed iframe:</p>
+                    <code>&lt;iframe frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen" src="https://anym3u8player.com/mp4-player/video-player.php?url=https://example.com/playlist.mp4" style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px;"&gt;&lt;/iframe&gt;</code>
+                    
+                    <h5>HTTP method (For non-secured websites)</h5>
+                    <p>If your website doesn't have an SSL certificate, use one of these methods:</p>
+                    <p>Example 1: <span class="http">http</span>://anym3u8player.com/mp4-player/video-player.php?url=<span class="http">http</span>://example.com/playlist.mp4</p>
+                    <p>Example 2: <span class="http">http</span>://anym3u8player.com/mp4-player/video-player.php?url=<span class="https">https</span>://example.com/playlist.mp4</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Handle fullscreen button click
+            document.getElementById("fullscreenPlayButton").addEventListener("click", function() {
+                var m3u8Url = document.getElementById("m3u8-url").value;
+                
+                if (!m3u8Url) {
+                    alert("Please enter a URL first.");
+                    return;
+                }
+                
+                var fullScreenUrl = "";
+                
+                // Check if the URL starts with http:// or https://
+                if (m3u8Url.indexOf("http://") === 0) {
+                    fullScreenUrl = "http://anym3u8player.com/m3u8-http/mp4-player.php?url=" + encodeURIComponent(m3u8Url);
+                } else if (m3u8Url.indexOf("https://") === 0) {
+                    fullScreenUrl = "https://anym3u8player.com/mp4-player/video-player.php?url=" + encodeURIComponent(m3u8Url);
+                } else {
+                    alert("Invalid URL. Please ensure it starts with http:// or https://");
+                    return;
+                }
+                
+                // Open the constructed URL in a new tab
+                window.open(fullScreenUrl, "_blank");
+            });
+            
+            // Share functionality
+            window.showEmbed = function() {
+                const embedInput = document.getElementById("embed-input");
+                embedInput.style.display = "block";
+                embedInput.select();
+            };
+            
+            window.copyLink = function() {
+                const m3u8Url = document.getElementById("m3u8-url").value;
+                const shareUrl = "https://anym3u8player.com/mp4-player/video-player.php?url=" + encodeURIComponent(m3u8Url);
+                
+                // Create temporary input element
+                const temp = document.createElement("input");
+                document.body.appendChild(temp);
+                temp.value = shareUrl;
+                temp.select();
+                document.execCommand("copy");
+                document.body.removeChild(temp);
+                
+                alert("Link copied to clipboard!");
+            };
+            
+            // Fake player interaction
+            const fakePlayButton = document.querySelector(".fake-play-button");
+            if (fakePlayButton) {
+                fakePlayButton.addEventListener("click", function() {
+                    const urlInput = document.getElementById("m3u8-url");
+                    urlInput.focus();
+                    urlInput.classList.add("pulse-animation");
+                    
+                    setTimeout(() => {
+                        urlInput.classList.remove("pulse-animation");
+                    }, 1500);
+                });
+            }
+            
+            // Prevent default on # links
+            document.querySelectorAll('a[href="#"]').forEach(link => {
+                link.addEventListener("click", e => e.preventDefault());
+            });
+        });
+    </script>
+</body>
+</html>
