@@ -873,9 +873,9 @@
                 
                 // Check if the URL starts with http:// or https://
                 if (m3u8Url.indexOf("http://") === 0) {
-                    fullScreenUrl = "http://anym3u8player.com/m3u8-http/mp4-player.php?url=" + encodeURIComponent(m3u8Url);
+                    fullScreenUrl = "https://vsalema.github.io/anym3u8/m3u8-http/mp4-player.php?url=" + encodeURIComponent(m3u8Url);
                 } else if (m3u8Url.indexOf("https://") === 0) {
-                    fullScreenUrl = "https://anym3u8player.com/mp4-player/video-player.php?url=" + encodeURIComponent(m3u8Url);
+                    fullScreenUrl = "https://vsalema.github.io/anym3u8/mp4-player/video-player.php?url=" + encodeURIComponent(m3u8Url);
                 } else {
                     alert("Invalid URL. Please ensure it starts with http:// or https://");
                     return;
@@ -894,7 +894,7 @@
             
             window.copyLink = function() {
                 const m3u8Url = document.getElementById("m3u8-url").value;
-                const shareUrl = "https://anym3u8player.com/mp4-player/video-player.php?url=" + encodeURIComponent(m3u8Url);
+                const shareUrl = "https://vsalema.github.io/anym3u8/mp4-player/video-player.php?url=" + encodeURIComponent(m3u8Url);
                 
                 // Create temporary input element
                 const temp = document.createElement("input");
@@ -928,4 +928,5 @@
         });
     </script>
 </body>
+
 </html>
